@@ -14,7 +14,10 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "echo 2"
+            "npm install"
+        ],
+        "post-update-cmd": [
+            "npm install"
         ]
     }
     
