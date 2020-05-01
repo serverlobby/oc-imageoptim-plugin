@@ -7,6 +7,6 @@
     },
     "devDependencies": {},
     "scripts": {
-        "postinstall": "mkdir -p assets/js/ && cp node_modules/lazysizes/lazysizes.min.js assets/js/lazysizes.min.js",
+        "postinstall": "mkdir -p assets/js/ && cp node_modules/lazysizes/lazysizes.min.js assets/js/lazysizes.min.js"
     }
 }
