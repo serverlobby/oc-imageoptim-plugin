@@ -10,15 +10,8 @@
     ],
     "require": {
         "php": ">=7.0",
-        "composer/installers": "~1.0"
-    },
-    "scripts": {
-        "post-install-cmd": [
-            "npm install"
-        ],
-        "post-update-cmd": [
-            "npm install"
-        ]
+        "composer/installers": "~1.0",
+        "eloquent/composer-npm-bridge": "~4.1"
     }
     
 }
