@@ -1,7 +1,7 @@
 {
     "name": "oc-imageoptim-plugin",
     "description": "",
-    "version": "1.0",
+    "version": "1.0.1",
     "dependencies": {
         "lazysizes": "^5.2.0"
     },
