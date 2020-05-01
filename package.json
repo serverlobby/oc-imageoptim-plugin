@@ -1,9 +1,12 @@
 {
     "name": "oc-imageoptim-plugin",
     "description": "",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "dependencies": {
         "lazysizes": "^5.2.0"
     },
-    "devDependencies": {}
+    "devDependencies": {},
+    "scripts": {
+        "postinstall": "mkdir -p assets/js/ && cp node_modules/lazysizes/lazysizes.min.js assets/js/lazysizes.min.js",
+    }
 }

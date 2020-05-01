@@ -19,11 +19,11 @@ class Plugin extends PluginBase
     public function boot()
     {
         Event::listen('cms.page.beforeDisplay', function($controller, $page) {
-            $controller->addJs('/plugins/tlokuus/imageoptim/node_modules/lazysizes/lazysizes.min.js');
+            $controller->addJs('/plugins/tlokuus/imageoptim/assets/js/lazysizes.min.js');
         });
 
         Event::listen('backend.page.beforeDisplay', function($controller, $page) {
-            $controller->addJs('/plugins/tlokuus/imageoptim/node_modules/lazysizes/lazysizes.min.js');
+            $controller->addJs('/plugins/tlokuus/imageoptim/assets/js/lazysizes.min.js');
         });
 
         Event::listen('markdown.beforeParse', function($data) {
