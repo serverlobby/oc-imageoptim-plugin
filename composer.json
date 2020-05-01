@@ -1,0 +1,21 @@
+{
+    "name": "tlokuus/oc-imageoptim-plugin",
+    "type": "october-plugin",
+    "description": "",
+    "authors": [
+        {
+            "name": "Aurélien Roy",
+            "email": "aurelien.roy@outlook.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "composer/installers": "~1.0"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "echo 2"
+        ]
+    }
+    
+}
