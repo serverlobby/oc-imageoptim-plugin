@@ -1,5 +1,7 @@
 <?php namespace Tlokuus\ImageOptim\Classes;
 
+use Log;
+use Request;
 use View;
 use System\Models\File;
 use SystemException;
@@ -29,6 +31,9 @@ class Image
     public function __construct($file, ?string $alt_text = null)
     {
         $this->file = $file;
+
+        Log::error('Trying to create null image ' . Request::fullUrl());
+
         $this->alt_text = ($alt_text ?? (($file instanceof File) ? $file->description : '')) ?? '';
     }
 
@@ -116,7 +121,11 @@ class Image
 
     private function getOriginalPath() : string
     {
-        return is_string($this->file) ? $this->file : $this->file->getPath();
+        if(is_null($this->file) || is_string($this->file)) {
+            return strval($this->file);
+        }
+
+        return $this->file->getPath();
     }
 
     /**
