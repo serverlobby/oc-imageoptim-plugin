@@ -32,7 +32,9 @@ class Image
     {
         $this->file = $file;
 
-        Log::error('Trying to create null image ' . Request::fullUrl());
+        if(is_null($file)) {
+            Log::error('Trying to create null image ' . Request::fullUrl());
+        }
 
         $this->alt_text = ($alt_text ?? (($file instanceof File) ? $file->description : '')) ?? '';
     }
